@@ -1,0 +1,30 @@
+<figure class="well">
+<div class="row">
+<% images.each_with_index do |image, index| %>
+    <% case columns %>
+        <% when 4 %>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+        <% when 3 %>
+        <div class="col-sm-6 col-md-4 col-lg-4">
+        <% when 2 %>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+        <% else %>
+        <div class="col-lg-12">
+    <% end %>
+    <img src="<%= image.url %>" alt="<%= image.alt %>" class="img-responsive">
+    </div>
+
+    <% case columns %>
+        <% when 4 %>
+        <% if index%2 == 4 %><div class="clearfix visible-lg"></div><% end %>
+        <% when 3 %>
+        <% if index%2 == 3 %><div class="clearfix visible-lg"></div><% end %>
+        <% when 2 %>
+        <% if index%2 == 0 %><div class="clearfix visible-lg"></div<% end %>
+        <% else %>
+        <div class="clearfix visible-lg"></div>
+    <% end %>
+<% end %>
+</div>
+<figcaption><%= caption %></figcaption>
+</figure>

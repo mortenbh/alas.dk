@@ -1,0 +1,46 @@
+---
+title: Publications
+---
+<h1>Publications</h1>
+<ul>
+    <li>
+    <% sitemap.resources.select { |p| p.data.type == 'publication' }.sort_by { |p| p.data.date }.reverse.each_with_index do |p, index| %>
+        
+        <ul class="publication">
+            <li class="thumb">
+                <a href="<%= p.data.project %>">
+                <img alt="<%= p.data.title %>"
+                src="/<%= File.dirname(p.path) %>/<%= File.basename(p.path, ".html") %>/thumb.jpg"
+                width="128"/></a>
+            </li>
+            <li>
+                <a href="<%= p.data.project %>">
+                <h2><%= p.data.title %></h2></a>
+            </li>
+            <li class="authors">
+            <ul>
+                <% p.data.authors.each do |author| %>
+                <% if author.name %>
+                    <% if author.url %><li><a href="<%= author.url %>"><%= author.name.split(', ').reverse.join(' ') %></a></li>
+                    <% else %><li><%= author.name.split(', ').reverse.join(' ') %></li><% end %>
+                <% end %>
+                <% end %>
+            </ul>
+            </li>
+            <% if p.data.doi %><li><a href="<%= p.data.doi %>"><i><%= p.data.publication %></i></a></li>
+            <% else %><li><i><%= p.data.publication %></i></li><% end %>
+            <li>
+                <ul class="resources">
+                    <li class="icon-project"><a href="<%= p.data.project %>">Project</a></li>
+                    <li class="icon-pdf"><a href="<%= p.data.paper %>">Paper</a></li>
+                    <% if p.data.video %><li class="icon-video"><a href="<%= p.data.video %>">Video</a></li><% end %>
+                    <% if p.data.source %><li class="icon-zip"><a href="<%= p.data.source %>">Source</a></li><% end %>
+                    <% if p.data.presentation %><li class="icon-presentation"><a href="<%= p.data.presentation %>">Presentation</a></li><% end %>
+                    <!-- <li class="icon-bib"><a href="../publications/GNRBfFRS_2016/GNRBfFRS_2016.bib">BibTeX</a></li> -->
+                </ul>
+            </li>
+        </ul>
+
+    <% end %>
+    </li>
+</ul>

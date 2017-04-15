@@ -1,0 +1,245 @@
+/*
+	color: #7ED9C8; #B1D900
+	color: #F2C84B;
+	color: #F2561D;
+	color: #372C26;
+	color: #DCD0BD;
+*/
+
+a {
+	text-decoration: none;
+	color: #F2561D;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+hr, h1, h2, h3, h4, h5, h6, h6, ul, li {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+	border-spacing: 0;
+}
+
+sup, sub {
+	font-size: 0.75em;
+}
+
+table, tr, td {
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+}
+
+.icon-bib { background: url('../images/icons/bib.gif') no-repeat; }
+.icon-code { background: url('../images/icons/code.gif') no-repeat; }
+.icon-demo { background: url('../images/icons/demo.gif') no-repeat; }
+.icon-errata { background: url('../images/icons/text.gif') no-repeat; }
+.icon-pdf { background: url('../images/icons/pdf.gif') no-repeat; }
+.icon-presentation { background: url('../images/icons/ppt.gif') no-repeat; }
+.icon-project { background: url('../images/icons/folder.gif') no-repeat; }
+.icon-video { background: url('../images/icons/video.gif') no-repeat; }
+.icon-zip { background: url('../images/icons/zip.gif') no-repeat; }
+
+html {
+	margin: 0;
+	padding: 0;
+	background: #DCD0BD;
+	color: #372C26;
+	font: 11pt sans-serif;
+}
+
+body {
+	width: 50em;
+	margin: 0 auto;
+	padding: 0;
+	background: white;
+	box-shadow: 5px 5px 25px -5px #333;
+}
+
+header#top {
+	height: 3.4em;
+	background: #B1D900;
+	background: -moz-linear-gradient(left, #B1D900, #574C46);
+	background: -ms-linear-gradient(left, #B1D900, #574C46);
+	background: -o-linaer-gradient(left, #B1D900, #574C46);
+	background: -webkit-linear-gradient(left, #B1D900, #574C46);
+	background: linear-gradient(left, #B1D900, #574C46);
+	color: white;
+}
+
+header#top h1 {
+	float: left;
+	margin: 0.2em 1em;
+	color: white;
+}
+
+header#top nav ul {
+	float: right;
+	list-style: none;
+}
+
+header#top nav li {
+	height: 5em;
+	float: left;
+	padding: 0 1em;
+	text-align: center;
+}
+
+header#top nav li a {
+	color: white;
+}
+
+header#top nav li.selected {
+	background: #F2561D;
+}
+
+article {
+	padding: 2em 4em;
+}
+
+article h1 {
+	margin: 2em 0 1em 0;
+	font-size: 1.2em;
+}
+
+article header h1 {
+	font-size: 1.5em;
+	margin: 1em 0;
+}
+
+article header h2 {
+	font-size: 1em;
+	margin: 1em 0;
+	text-align: center;
+	font-style: italic;
+}
+
+article ul {
+	list-style: none;
+}
+
+article ul ul.publication {
+	margin-left: 160px;
+	margin-bottom: 1.5em;
+	min-height: 7em;
+}
+
+article ul ul.publication li.thumb {
+	position: absolute;
+	margin-left: -160px;
+}
+
+article ul ul.publication li.thumb img {
+	border: 1px solid black;
+	box-shadow: 5px 5px 25px -5px #333;
+}
+
+article ul ul.publication li.authors ul li {
+    display: inline;
+}
+
+article ul ul.publication li.authors ul li:after {
+    content: ',';
+}
+
+article ul ul.publication li.authors ul li:last-child:after {
+    content: '';
+}
+
+article ul ul.publication li h2 {
+	font-size: medium;
+	margin: 0;
+}
+
+article ul ul.publication ul.resources li {
+	display: inline;
+	padding-left: 18px;
+	padding-right: 5px;
+}
+
+article figure {
+	margin: auto 0;
+	padding-bottom: 1em;
+}
+
+article figure figcaption {
+	font-style: italic;
+}
+
+section.publication h1 {
+	width: 10em;
+	font-size: 1em;
+	float: left;
+	margin: 0;
+}
+
+section.publication div {
+	height: 1.5em;
+	clear: both;
+}
+
+
+ul.authors, ul.affiliations {
+	display: block;
+}
+
+ul.authors li, ul.affiliations li {
+	list-style: none;
+	display: inline;
+}
+
+article iframe {
+	display: block;
+}
+
+article table {
+	border-collapse: collapse;
+}
+
+article td {
+	padding: 0.5em;
+	border-top: 1pt solid black;
+	border-bottom: 1pt solid black;
+}
+
+article pre {
+	font-size: 0.8em;
+	overflow: hidden;
+	background-color: #ddd;
+}
+
+ul.downloads {
+}
+
+ul.downloads li {
+	padding-left: 20px;
+	background-repeat: no-repeat;
+}
+
+ul.downloads li.pdf { background-image: url('../images/icons/pdf.gif'); }
+ul.downloads li.presentation { background-image: url('../images/icons/ppt.gif'); }
+ul.downloads li.video { background-image: url('../images/icons/video.gif'); }
+ul.downloads li.bib { background-image: url('../images/icons/bib.gif'); }
+ul.downloads li.zip { background-image: url('../images/icons/zip.gif'); }
+
+article table#files col.name {
+	width: 75%;
+}
+
+article table#media col.source {
+	width: 25%;
+}
+
+#me {
+	/* width: 135px; */
+	height: 200px;
+	float: right;
+	margin: 0.5em 1em;
+	padding: 2px;
+}
+
+#me:hover {
+	background: #F2561D;
+}
