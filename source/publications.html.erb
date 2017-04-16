@@ -4,7 +4,7 @@ title: Publications
 <h1>Publications</h1>
 <ul>
     <li>
-    <% sitemap.resources.select { |p| p.data.type == 'publication' }.sort_by { |p| p.data.date }.reverse.each_with_index do |p, index| %>
+    <% sitemap.resources.select { |p| p.data.publication }.sort_by { |p| p.data.date }.reverse.each_with_index do |p, index| %>
         
         <ul class="publication">
             <li class="thumb">

@@ -1,7 +1,35 @@
-<h4>Publication</h4>
-
-<% if url %>
-<a href="<%= url %>"><%= publication %></a>
-<% else %>
-<= publication %>
-<% end %>
+<section class="publication">
+    <div>
+        <h3>Publication</h3>
+        <% if publication.doi %>
+            <a href="<%= publication.doi %>"><%= publication.publication %></a>
+        <% else %>
+            <%= publication.publication %>
+        <% end %>
+    </div>
+    <div>
+        <h3>Authors</h3>
+        <ul class="authors">
+        <% authors.each do |author| %>
+        <% fullname = author.name.split(', ').reverse.join(' ') %>
+            <% if author.url %>
+                <li><a href="<%= author.url %>"><%= fullname %></a><sup><%= author.affiliations.join(',') %></sup></li>
+            <% else %>
+                <li><%= fullname %><sup><%= author.affiliations.join(',') %></sup></li>
+            <% end %>
+        <% end %>
+        </ul>
+    </div>
+    <div>
+        <h3>Affiliations</h3>
+        <ul class="affiliations">
+        <% affiliations.each_with_index do |affil, index| %>
+            <% if affil.url %>
+                <li><a href="<%= affil.url %>"><%= affil.name %></a><sup><%= index+1 %></sup></li>
+            <% else %>
+                <li><%= affil.name %><sup><%= index+1 %></sup></li>
+            <% end %>
+        <% end %>
+        </ul>
+    </div>
+</section>

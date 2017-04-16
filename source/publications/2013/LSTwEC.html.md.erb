@@ -71,11 +71,9 @@ teaser:
 
 ## <%= page.title %>
 
-<%= partial "partials/figure", locals: { caption: page.teaser.caption, images: page.teaser.images, columns: 4 } %>
+<%= partial "partials/figure", locals: { caption: page.teaser.caption, images: page.teaser.images, columns: 2 } %>
 
-<%= partial "partials/authors", locals: { authors: page.authors, affiliations: page.affiliations } %>
-
-<%= partial "partials/publication", locals: { publication: page.publication, url: page.doi } %>
+<%= partial "partials/publication", locals: { publication: page, authors: page.authors, affiliations: page.affiliations } %>
 
 ### Abstract
 

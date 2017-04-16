@@ -49,3 +49,6 @@ end
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+# enable pretty URLs (foo.html.erb -> foo/index.html rather than foo.html)
+activate :directory_indexes
